@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threat_verifier2.App.AppController">
+   <children>
+      <ImageView fitHeight="584.0" fitWidth="958.0" opacity="0.15" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/unnamed.gif" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="157.0" layoutY="81.0" prefHeight="96.0" prefWidth="538.0" styleClass="card" stylesheets="@../Styles.css">
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="579.0" opacity="0.07" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/download.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="url" layoutX="61.0" layoutY="42.0" prefHeight="25.0" prefWidth="309.0" promptText="Enter The App Name" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="550.0" layoutY="228.0" onAction="#Scan" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: green; -fx-background-radius: 15px;" text="Scan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#b51313" layoutX="34.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check  Your App Vulnerability" wrappingWidth="317.9999877214432">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Separator layoutX="20.0" layoutY="57.0" prefHeight="3.0" prefWidth="938.0" />
+      <ImageView fx:id="loader" fitHeight="370.0" fitWidth="406.0" layoutX="166.0" layoutY="154.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/icons8_Rotate_24px.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="17.0" layoutY="249.0" prefHeight="338.0" prefWidth="124.0">
+         <content>
+            <Text fx:id="bababa" fill="#b51313" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty List" wrappingWidth="121.99998772144318">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </content>
+      </ScrollPane>
+      <WebView fx:id="webView" layoutX="853.0" layoutY="16.0" prefHeight="31.0" prefWidth="38.0" />
+      <Text layoutX="20.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVE Code For:" wrappingWidth="103.99998772144318">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="bravo" layoutX="129.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="281.9999877214432">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Separator layoutX="28.0" layoutY="247.0" prefWidth="200.0" />
+      <ImageView fitHeight="139.0" fitWidth="229.0" layoutX="693.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Capture.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

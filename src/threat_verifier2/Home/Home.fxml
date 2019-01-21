@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threat_verifier2.Home.HomeController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="1156.0">
+         <children>
+            <AnchorPane layoutY="26.0" prefHeight="620.0" prefWidth="211.0" style="-fx-background-color: grey;">
+               <children>
+                  <JFXButton contentDisplay="TOP" layoutX="-3.0" layoutY="94.0" onAction="#source" prefHeight="109.0" prefWidth="221.0" text="Source Scan" textFill="#dacfcf">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/unnamed.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="2.0" layoutY="487.0" onAction="#quiz" prefHeight="111.0" prefWidth="214.0" text="About Software" textFill="#e4d7d7">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="84.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons8_High_Importance_96px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="2.0" layoutY="219.0" onAction="#app" prefHeight="129.0" prefWidth="214.0" text="App Scan" textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="84.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons8_Spam_96px.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Text fill="#b53030" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#b53030" layoutX="55.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifier">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <JFXButton contentDisplay="TOP" layoutX="4.0" layoutY="352.0" onAction="#message" prefHeight="129.0" prefWidth="214.0" text="Message Scan" textFill="#dacfcf">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/tick.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane" layoutX="214.0" layoutY="27.0" prefHeight="620.0" prefWidth="938.0">
+               <children>
+                  <AnchorPane layoutX="199.0" layoutY="33.0" prefHeight="94.0" prefWidth="238.0" style="-fx-background-radius: 20px;" styleClass="card" stylesheets="@../threatindentifier/Styles.css">
+                     <children>
+                        <Text layoutX="33.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identify Security Objectives">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="232.0" layoutY="173.0" prefHeight="76.0" prefWidth="166.0" styleClass="card" stylesheets="@../threatindentifier/Styles.css">
+                     <children>
+                        <Text layoutX="35.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application     Overview" wrappingWidth="109.99999850988388">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="32.0" layoutY="297.0" prefHeight="76.0" prefWidth="166.0" styleClass="card" stylesheets="@../threatindentifier/Styles.css">
+                     <children>
+                        <Text layoutX="27.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identify Vulnerability" wrappingWidth="109.99999850988388">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="424.0" layoutY="297.0" prefHeight="76.0" prefWidth="176.0" styleClass="card" stylesheets="@../threatindentifier/Styles.css">
+                     <children>
+                        <Text layoutX="30.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decompose Application" wrappingWidth="109.99999850988388">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="222.0" layoutY="458.0" prefHeight="76.0" prefWidth="186.0" styleClass="card" stylesheets="@../threatindentifier/Styles.css">
+                     <children>
+                        <Text layoutX="57.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identify Threats" wrappingWidth="109.99999850988388">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="315.0" layoutY="127.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="8.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="525.0" layoutY="209.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="8.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="111.0" layoutY="201.0" orientation="VERTICAL" prefHeight="94.0" prefWidth="0.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="107.0" layoutY="373.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="8.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="519.0" layoutY="373.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="8.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="110.0" layoutY="200.0" prefHeight="7.0" prefWidth="118.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="112.0" layoutY="489.0" prefHeight="7.0" prefWidth="110.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="408.0" layoutY="493.0" prefHeight="7.0" prefWidth="110.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="398.0" layoutY="208.0" prefHeight="7.0" prefWidth="126.0" style="-fx-background-color: black;" />
+                  <Text layoutX="641.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STRIDE METHODOLOGY">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="580.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stride is a classification scheme for characterizing known threats according to the kind of exploit that are used." wrappingWidth="349.681640625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="631.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DREAD METHODOLOGY">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="586.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dread is a classification scheme for quantifyng, comparing and priortizing the amount of risk presented by each evaluated threat. " wrappingWidth="349.681640625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="29.0" prefWidth="1160.0" style="-fx-background-color: grey;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

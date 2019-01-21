@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threat_verifier2.Message.MessageController">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="938.0" opacity="0.15" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/unnamed.gif" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="23.0" layoutY="97.0" prefHeight="224.0" prefWidth="408.0" styleClass="card" stylesheets="@../Styles.css">
+         <children>
+            <ImageView fitHeight="222.0" fitWidth="408.0" layoutY="2.0" opacity="0.03" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/images-5.png" />
+               </image>
+            </ImageView>
+            <JFXRadioButton fx:id="EmailBtn" layoutX="28.0" layoutY="14.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="option" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <TextField fx:id="SubjectEmailHolder" layoutX="14.0" layoutY="139.0" prefHeight="25.0" prefWidth="247.0" promptText="Subjects" />
+            <JFXRadioButton fx:id="SenderAddress" layoutX="-2.0" layoutY="58.0" text="Message Only">
+               <toggleGroup>
+                  <ToggleGroup fx:id="email" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="Subjects" layoutX="-2.0" layoutY="95.0" text="Message with Subject">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXRadioButton>
+            <JFXRadioButton fx:id="Address" layoutX="162.0" layoutY="95.0" text="Message with Sender's Address">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="SubjectsandAddress" layoutX="116.0" layoutY="58.0" text="Message with Subject and Sender Address">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <TextField fx:id="SubjectEmailHolder1" layoutX="55.0" layoutY="178.0" prefHeight="25.0" prefWidth="247.0" promptText="Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="150.0" layoutY="369.0" prefHeight="126.0" prefWidth="408.0" styleClass="card" stylesheets="@../Styles.css">
+         <children>
+            <TextArea fx:id="textarea" prefHeight="126.0" prefWidth="408.0" promptText="Paste Objects here!!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="436.0" layoutY="99.0" prefHeight="222.0" prefWidth="212.0" styleClass="card" stylesheets="@../Styles.css">
+         <children>
+            <ImageView fitHeight="222.0" fitWidth="223.0" opacity="0.03" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/images-5.png" />
+               </image>
+            </ImageView>
+            <JFXRadioButton fx:id="TxtBtn" layoutX="43.0" layoutY="14.0" text="Text Messages" toggleGroup="$option">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <RadioButton fx:id="MobileNo" layoutX="86.0" layoutY="62.0" mnemonicParsing="false" text="Mobile Number" toggleGroup="$email" />
+            <RadioButton fx:id="RegLine" layoutX="89.0" layoutY="103.0" mnemonicParsing="false" text="Registered Line" toggleGroup="$email" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="674.0" layoutY="98.0" prefHeight="230.0" prefWidth="240.0" styleClass="card" stylesheets="@../Styles.css">
+         <children>
+            <ImageView fitHeight="224.0" fitWidth="258.0" layoutY="2.0" opacity="0.03" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/images-5.png" />
+               </image>
+            </ImageView>
+            <JFXRadioButton fx:id="SocialBtn" layoutX="48.0" layoutY="16.0" text="Social Media" toggleGroup="$option">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <RadioButton fx:id="FaceBook" layoutX="113.0" layoutY="55.0" mnemonicParsing="false" text="FaceBook" toggleGroup="$email" />
+            <RadioButton fx:id="Twitter" layoutX="115.0" layoutY="90.0" mnemonicParsing="false" text="Twitter" toggleGroup="$email" />
+            <RadioButton fx:id="Instagram" layoutX="115.0" layoutY="127.0" mnemonicParsing="false" text="Instagram" toggleGroup="$email" />
+            <RadioButton fx:id="Others" layoutX="118.0" layoutY="165.0" mnemonicParsing="false" text="Others" toggleGroup="$email" />
+         </children>
+      </AnchorPane>
+      <Text fill="#b51313" layoutX="24.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check  Your Message Vulnerability" wrappingWidth="317.9999877214432">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Separator layoutX="10.0" layoutY="47.0" prefHeight="3.0" prefWidth="938.0" />
+      <AnchorPane fx:id="statusPane" layoutX="17.0" layoutY="524.0" prefHeight="102.0" prefWidth="900.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+         <children>
+            <Text fx:id="status" layoutX="20.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="img" fitHeight="58.0" fitWidth="62.0" layoutX="756.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/images-6.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="close1" layoutX="884.0" layoutY="41.0" style="-fx-background-color: RED; -fx-background-radius: 60PX;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="count" layoutX="829.0" layoutY="43.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="scanEmail" layoutX="193.0" layoutY="329.0" onAction="#scanEmail" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: green; -fx-background-radius: 15px;" text="Scan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ScanText" layoutX="489.0" layoutY="329.0" onAction="#scanText" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: green; -fx-background-radius: 15px;" text="Scan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="scanSocial" layoutX="818.0" layoutY="335.0" onAction="#scanSocial" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: green; -fx-background-radius: 15px;" text="Scan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="paner" layoutX="23.0" layoutY="93.0" prefHeight="363.0" prefWidth="912.0" style="-fx-background-color: grey;">
+         <children>
+            <BarChart fx:id="barChart" layoutY="39.0" legendSide="TOP" prefHeight="267.0" prefWidth="520.0" title="OUTPUT" titleSide="BOTTOM" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="39.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <JFXButton fx:id="closePaner" layoutX="855.0" layoutY="6.0" style="-fx-background-color: red;" text="Close" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="417.0" layoutY="256.0" text="Discoverability" />
+            <Label layoutX="348.0" layoutY="256.0" text="Affect" />
+            <Label layoutX="244.0" layoutY="257.0" text="Exploitability" />
+            <Label layoutX="136.0" layoutY="257.0" text="Reproductability" />
+            <Label layoutX="49.0" layoutY="256.0" text="Damage" />
+            <AnchorPane fx:id="stridePane" layoutX="551.0" layoutY="21.0" prefHeight="222.0" prefWidth="247.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <Text layoutX="20.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spoofing Identity" wrappingWidth="134.00000016577542">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tampering with Data" wrappingWidth="150.00000016577542">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="20.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repudiation" wrappingWidth="134.00000016577542">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="20.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information Disclosure" wrappingWidth="166.00000016577542">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="20.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Denial of Service" wrappingWidth="134.00000016577542">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="spo" layoutX="205.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="tam" layoutX="207.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="repu" layoutX="206.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="infodisco" layoutX="208.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="denial" layoutX="208.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="20.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elevation of Privilege" wrappingWidth="150.00000086426735">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="elevation" layoutX="181.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="68.00000462681055">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" layoutX="574.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat Identification">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="ThreatAccessment" fill="WHITE" layoutX="757.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat Assessment">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="ThreatIdentification" fill="WHITE" layoutX="574.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.90965616703033">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+            <Text fx:id="ThreatAccessment" fill="WHITE" layoutX="765.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.0000170469284">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

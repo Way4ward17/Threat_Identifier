@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="splashAnchorPanee" prefHeight="246.0" prefWidth="490.0" style="-fx-background-color: grey; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threat_verifier2.SplashController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="490.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="206.0" fitWidth="490.0" layoutY="-4.0" opacity="0.21" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/baba.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="206.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat_Indentifier">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="168.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="An Anti_Theft Software">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <JFXProgressBar layoutY="187.0" prefHeight="1.0" prefWidth="490.0" />
+         </children>
+      </AnchorPane>
+      <Text fill="#f2eaea" layoutX="5.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thiis framework is designed to assist web and software developers on how to secure there" wrappingWidth="482.6484375" />
+      <Text fill="#f8f4f4" layoutX="5.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="website and software from threats and attackers. Kindly visit the instruction page if you dont seems not to understand the configuration of this app" wrappingWidth="482.6484375" />
+   </children>
+</AnchorPane>
